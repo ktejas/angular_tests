@@ -1,0 +1,11 @@
+body{background:#ffffff !important;}
+
+.error {
+  color:red;
+  font-style:italic;
+}
+
+.user {
+  color : green;
+  font-size :15pt;
+}
