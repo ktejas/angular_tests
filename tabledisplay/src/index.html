@@ -1,46 +1,65 @@
 <!DOCTYPE html>
 <html ng-app="tableJson">
-<head>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <head>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js" type="3c4ecb1211e16d48f4995650-text/javascript"></script>
+        <title>Angular Framework</title>
+    </head>
+    
+    <body>
+        <div ng-controller="tableJsonCtrl">
+            <table border="1" cellpadding="10">
+                <tr ng-repeat="items in users">
+                    <td>{{items.name}}</td>
+                    <td>{{items.snippet}}</td>
+                    <td>{{items.age}}</td>
+                </tr>
+            </table>
+        </div>
 
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js" type="3c4ecb1211e16d48f4995650-text/javascript"></script>
-<title>Angular Framework</title>
-</head>
-<body>
-<div ng-controller="tableJsonCtrl">
-<table border="1" cellpadding="10">
-<tr ng-repeat="items in phones">
-<td>{{items.name}}</td>
-<td>{{items.snippet}}</td>
-<td>{{items.age}}</td>
-</tr>
-</table>
-</div>
-<script type="3c4ecb1211e16d48f4995650-text/javascript">
-    var tableJson = angular.module('tableJson', []);
-    tableJson.controller('tableJsonCtrl', function($scope){
-    $scope.phones = [
-    { "name": "Nexus S",
-    "snippet": "Fast just got faster with Nexus S.",
-    "age": 0
-    },
-    { "name": "Apple iPhone 4S (White) (8 GB)",
-    "snippet": "3.5 Inch Widescreen Diagonal",
-    "age": 1
-    },
-    { "name": "Samsung Galaxy Core 2 (White)",
-    "snippet": "powerful 1.2 GHz Quad Core processor and Android 4.4 Kitkat Operating System",
-    "age": 2
-    },
-    {
-    "name": "Micromax Canvas HD Plus A190, white gold",
-    "snippet": "4.76 GB for mass storage",
-    "age": 2
-    }
-    ];
-     
-    })
-    </script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" type="3c4ecb1211e16d48f4995650-text/javascript"></script>
-<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/2448a7bd/cloudflare-static/rocket-loader.min.js" data-cf-nonce="3c4ecb1211e16d48f4995650-" defer=""></script></body>
+        <script type="3c4ecb1211e16d48f4995650-text/javascript">
+            var tableJson = angular.module('tableJson', []);
+            /*
+            tableJson.controller("tableJsonCtrl", function ($scope, $http) {
+                $scope.thing = "hi";
+
+                $http.get("/test.json")
+                        .success(function (data) {
+                            $scope.stuff = data.array;
+                            $scope.name = data.name;
+                        })
+                        .error(function (data) {
+                            console.log("there was an error");
+                        });
+            });
+            */
+            ///*
+            tableJson.controller('tableJsonCtrl', function($scope){
+                $scope.users = [
+                    { "name": "Teja",
+                    "snippet": "Referred by Krishna",
+                    "age": 24
+                    },
+                    { "name": "Krishna",
+                    "snippet": "Referred by Teja",
+                    "age": 25
+                    },
+                    { "name": "John",
+                    "snippet": "Referred by David",
+                    "age": 30
+                    },
+                    {
+                    "name": "Smith",
+                    "snippet": "Referred by John",
+                    "age": 42
+                    }
+                ];
+            })
+            //*/
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/2448a7bd/cloudflare-static/rocket-loader.min.js" data-cf-nonce="3c4ecb1211e16d48f4995650-" defer=""></script>
+    </body>
 </html>

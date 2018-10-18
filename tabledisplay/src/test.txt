@@ -1,0 +1,17 @@
+{ "name": "Teja",
+"snippet": "Referred by Krishna",
+"age": 24
+},
+{ "name": "Krishna",
+"snippet": "Referred by Teja",
+"age": 25
+},
+{ "name": "John",
+"snippet": "Referred by David",
+"age": 30
+},
+{
+"name": "Smith",
+"snippet": "Referred by John",
+"age": 42
+}
